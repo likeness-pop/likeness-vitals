@@ -1,0 +1,92 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+
+[project]
+name = "likeness_vitals"
+dynamic = ["version"]
+authors = [
+    {name = "James D. Gaboardi", email = "gaboardijd@ornl.gov"},
+    {name = "Jospeh V. Tuccillo", email = "tuccillojv@ornl.gov"},
+]
+maintainers = [
+    {name = "James D. Gaboardi"},
+    {name = "Jospeh V. Tuccillo"},
+]
+#license = {text = ""}
+description = "Shared utility functionality for Likeness modules."
+keywords = ["population-synthesis-utilities"]
+readme = "README.md"
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: GIS",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.11"
+dependencies = [
+    "geopandas>=1.0",
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "scipy>=1.12",
+    "shapely>=2.0",
+    "tqdm>=4.63",
+    "matplotlib>=3.7.1",
+]
+
+[project.urls]
+Home = "https://code.ornl.gov/likeness"
+Repository = "https://code.ornl.gov/likeness/likeness-vitals"
+
+[project.optional-dependencies]
+tests = [
+    "pre-commit",
+    "pytest",
+    "pytest-cov",
+    "pytest-xdist",
+    "ruff",
+    "setuptools_scm",
+]
+notebooks = [
+    "matplotlib",
+    "watermark",
+]
+all = ["likeness_vitals[tests,notebooks]"]
+
+
+[tool.setuptools.packages.find]
+include = [
+    "likeness_vitals",
+    "likeness_vitals.*",
+]
+
+[tool.coverage.run]
+omit = ["likeness_vitals/tests/*"]
+source = ["likeness_vitals"]
+
+[tool.coverage.report]
+exclude_lines = ["except ImportError"]
+ignore_errors = true
+omit = ["likeness_vitals/tests/*"]
+
+[tool.ruff]
+line-length = 88
+extend-include = ["*.ipynb"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "N", "B", "A", "C4", "SIM", "ARG"]
+
+[tool.ruff.lint.per-file-ignores]
+"*__init__.py" = ["F401"] # unused-import
+"*.ipynb" = [
+    "F401",
+    "C408", # Unnecessary `dict` call (rewrite as a literal)
+]
+
+
