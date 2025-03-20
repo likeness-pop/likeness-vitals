@@ -19,8 +19,6 @@ from importlib.metadata import PackageNotFoundError, version
 #         "The release at the time of this warning inclusion was ``v1.3.0``, so "
 #         "the current API will be stable until ``v1.5.0`` at the soonest, and "
 #         "the ``v2.0.0`` release will be the absolute deadline. "
-#         "See [https://code.ornl.gov/likeness/likeness-vitals/-/issues/32] "
-#         "for details on how to update dependant packages."
 #     ),
 #     FutureWarning,
 #     stacklevel=1,
