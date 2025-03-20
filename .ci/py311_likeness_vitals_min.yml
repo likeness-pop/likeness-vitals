@@ -1,0 +1,23 @@
+name: py311_likeness_vitals_min
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - geopandas=1.0.1
+  - git
+  - numpy=1.26.4
+  - pandas=2.2.1
+  - pip
+  - scipy=1.12.0
+  - shapely=2.0.1
+  - tqdm=4.63
+  - matplotlib=3.7.1
+  # testing, etc.
+  - pre-commit
+  - pytest
+  - pytest-cov
+  - pytest-xdist
+  - ruff
+  - setuptools_scm
+  - watermark
+
