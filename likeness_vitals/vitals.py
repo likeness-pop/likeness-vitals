@@ -1,6 +1,4 @@
 """Shared utility functionality for Likeness modules
-
-@41q @9vt
 """
 
 import pathlib

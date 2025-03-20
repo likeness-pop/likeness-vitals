@@ -1,6 +1,4 @@
 """Spatial & Geometric Operations
-
-@41q
 """
 
 import contextlib

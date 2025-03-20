@@ -1,6 +1,4 @@
 """Constants and global variables
-
-@41q
 """
 
 GID = "geoid"  # standard GEOID label
