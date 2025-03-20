@@ -9,7 +9,7 @@ import pandas
 from scipy.spatial import cKDTree
 from shapely import Point, Polygon
 
-__author__ = "@41q"
+__author__ = "jGaboardi"
 
 
 __all__ = [
