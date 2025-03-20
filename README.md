@@ -1,3 +1,1 @@
-# `likeness-vitals`
-
-Shared utility functionality for Likeness modules
+# Likeness-Vitals: Shared utility functionality for Likeness modules
