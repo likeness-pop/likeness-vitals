@@ -19,5 +19,5 @@ conda activate $"py312_likeness_gh$env"
 # install R packages from source
 R --silent -e "remotes::install_bitbucket('jovtc/pmedmrcpp')"
 R --silent -e "IRkernel::installspec()"
-R --silent -e "remotes::install_git('ssh://git@github.com/likeness-pop/pmedmrcpp-pal.git@main')"
-pip install git+ssh://git@github.com/likeness-pop/pmedm-legacy.git@main --no-deps --no-cache-dir
+R --silent -e "remotes::install_git('https://github.com/likeness-pop/pmedmrcpp-pal.git@develop')"
+pip install git+https://github.com/likeness-pop/pmedm-legacy.git@develop --no-deps --no-cache-dir
