@@ -11,9 +11,6 @@ dependencies:
   - dill
   - fastparquet
   - geopandas>=1.0
-  - jax>0.5.31
-  - jaxlib=0.4.31
-  - jaxopt>=0.8.1
   - joblib
   - libpysal>=4.12
   - matplotlib>=3.7
