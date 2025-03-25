@@ -8,19 +8,22 @@ dependencies:
   # GPU-specific
   - cuda-nvcc
   - cudatoolkit
-  - "jax[cuda12]<=0.4.31"
-  - "jaxlib[cuda12]<=0.4.31"
-  - jaxopt>=0.8.1
+  - "jax[cuda12]<=0.4.31"    # [==0.4.31] for GPU/CUDA; [>=0.5.3] for CPU
+  - "jaxlib[cuda12]<=0.4.31" # [==0.4.31] for GPU/CUDA; [>=0.5.3] for CPU
+  - jaxopt>=0.8.3
   # core dependencies
   - awkward>=2.6
+  - dask
   - deprecation
   - dill
+  - fastparquet
   - geopandas>=1.0
   - libpysal>=4.12
   - matplotlib>=3.7
   - multiprocess>=0.70.15
   - networkx>=3.2
   - numpy>=1.26
+  - packaging
   - pandas>=2.2
   - pyarrow
   - scikit-learn>=1.4
@@ -50,6 +53,6 @@ dependencies:
   - jupyterlab
   - pip:
     - pygris>=0.1.6
-    - git+ssh://git@github.com/likeness-pop/pymedm.git@main
-    - git+ssh://git@github.com/likeness-pop/livelike.git@main
-    - git+ssh://git@github.com/likeness-pop/likeness-vitals.git@main
+    - git+https://github.com/likeness-pop/pymedm.git@develop
+    - git+https://git@github.com/likeness-pop/livelike.git@develop
+    - git+https://git@github.com/likeness-pop/likeness-vitals.git@develop
