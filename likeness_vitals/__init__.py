@@ -1,5 +1,4 @@
-"""Shared utility functionality for Likeness modules
-"""
+"""Shared utility functionality for Likeness modules"""
 
 # ruff: noqa: E402
 
@@ -22,7 +21,6 @@ from importlib.metadata import PackageNotFoundError, version
 #     stacklevel=1,
 # )
 #
-
 from . import constants, sg_ops, vitals
 from .constants import (
     BGID,

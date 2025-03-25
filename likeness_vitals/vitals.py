@@ -1,5 +1,4 @@
-"""Shared utility functionality for Likeness modules
-"""
+"""Shared utility functionality for Likeness modules"""
 
 import pathlib
 import time
