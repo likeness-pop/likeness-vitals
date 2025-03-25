@@ -1,5 +1,4 @@
-"""Spatial & Geometric Operations
-"""
+"""Spatial & Geometric Operations"""
 
 import contextlib
 

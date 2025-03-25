@@ -1,5 +1,4 @@
-"""Constants and global variables
-"""
+"""Constants and global variables"""
 
 GID = "geoid"  # standard GEOID label
 BGID = "bgid"  # block group GEOID
