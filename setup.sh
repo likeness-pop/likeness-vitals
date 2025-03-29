@@ -9,7 +9,7 @@ else
 fi
 
 # install and activate base environment
-mamba env create -f $"envs/py312_likeness_gh$env.yml"
+conda env create -f $"envs/py312_likeness_gh$env.yml"
 conda_path=$(which conda)
 conda_activate_path=$(echo "${conda_path/"/conda"/"/activate"}")
 source activate $conda_activate_path
