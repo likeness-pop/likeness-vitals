@@ -41,8 +41,8 @@ dependencies = [
 ]
 
 [project.urls]
-Home = "https://code.ornl.gov/likeness"
-Repository = "https://code.ornl.gov/likeness/likeness-vitals"
+Home = "https://github.com/likeness-pop"
+Repository = "https://github.com/likeness-pop/likeness-vitals"
 
 [project.optional-dependencies]
 tests = [
