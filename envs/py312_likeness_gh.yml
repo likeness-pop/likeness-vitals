@@ -6,7 +6,7 @@ dependencies:
   - python=3.12
   # core dependencies
   - awkward>=2.6
-  - ca-certificates!=2025.4.26 # see gh#35
+  - ca-certificates<=2025.1.31 # see gh#35,#37
   - dask
   - deprecation
   - dill
