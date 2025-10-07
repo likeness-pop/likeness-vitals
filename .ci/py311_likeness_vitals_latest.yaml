@@ -3,7 +3,7 @@ channels:
   - conda-forge
 dependencies:
   - python=3.11
-  - ca-certificates<=2025.1.31 # see gh#35,#37
+  - ca-certificates
   - geopandas
   - git
   - numpy

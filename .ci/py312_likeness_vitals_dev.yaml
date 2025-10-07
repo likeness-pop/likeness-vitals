@@ -7,7 +7,7 @@ channels:
   - conda-forge
 dependencies:
   - python=3.12
-  - ca-certificates # see gh#97,#102 -- EXPECTED TO FAIL compatible release of python-certifi
+  - ca-certificates
   - git
   - pip
   - matplotlib
