@@ -32,8 +32,6 @@ jobs:
         ]
         include:
           - environment-file: py312_likeness_vitals_latest
-            os: macos-13  # Intel
-          - environment-file: py312_likeness_vitals_latest
             os: macos-latest  # Apple Silicon
           - environment-file: py312_likeness_vitals_latest
             os: windows-latest
@@ -56,7 +54,7 @@ jobs:
           micromamba-version: "latest"
 
       - name: install package
-        run: "pip install -e . --no-deps"
+        run: "pip install -e . --no-deps --no-cache-dir"
 
       - name: spatial versions
         run: 'python -c "import geopandas; geopandas.show_versions();"'
@@ -77,6 +75,6 @@ jobs:
           --local False
 
       - name: codecov
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
