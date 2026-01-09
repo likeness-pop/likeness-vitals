@@ -25,7 +25,7 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         environment-file: [
-          py311_likeness_vitals_min,
+          py311_likeness_vitals_oldest,
           py311_likeness_vitals_latest,
           py312_likeness_vitals_latest,
           py312_likeness_vitals_dev,

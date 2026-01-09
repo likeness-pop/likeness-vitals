@@ -18,7 +18,7 @@ dependencies:
   - deprecation
   - dill
   - fastparquet
-  - geopandas>=1.0
+  - geopandas>=1.1
   - libpysal>=4.12
   - matplotlib>=3.7
   - multiprocess>=0.70.15
