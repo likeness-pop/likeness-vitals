@@ -4,7 +4,7 @@ channels:
 dependencies:
   - python=3.11
   - ca-certificates>=2025.10.5 # see gh#35,#37
-  - geopandas=1.0.1
+  - geopandas=1.1
   - git
   - numpy=1.26.4
   - pandas=2.2.1
