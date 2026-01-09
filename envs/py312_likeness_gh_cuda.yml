@@ -13,11 +13,12 @@ dependencies:
   - jaxopt>=0.8.3
   # core dependencies
   - awkward>=2.6
+  - ca-certificates>=2025.10.5
   - dask
   - deprecation
   - dill
   - fastparquet
-  - geopandas>=1.0
+  - geopandas>=1.1
   - libpysal>=4.12
   - matplotlib>=3.7
   - multiprocess>=0.70.15
@@ -26,6 +27,7 @@ dependencies:
   - packaging
   - pandas>=2.2
   - pyarrow
+  - pygris
   - scikit-learn>=1.4
   - scipy>=1.12
   - shapely>=2.0.1
@@ -52,7 +54,6 @@ dependencies:
   - ipywidgets
   - jupyterlab
   - pip:
-    - pygris>=0.1.6
     - git+https://github.com/likeness-pop/pymedm.git@develop
     - git+https://git@github.com/likeness-pop/livelike.git@develop
     - git+https://git@github.com/likeness-pop/likeness-vitals.git@develop

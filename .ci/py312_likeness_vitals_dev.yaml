@@ -7,8 +7,7 @@ channels:
   - conda-forge
 dependencies:
   - python=3.12
-  - cython
-  - geos
+  - ca-certificates
   - git
   - pip
   - matplotlib
@@ -25,7 +24,7 @@ dependencies:
     - --pre \
       --index-url https://pypi.anaconda.org/scientific-python-nightly-wheels/simple \
       --extra-index-url https://pypi.org/simple
-    - numpy # this may fail for ``numpy>=2``
+    - numpy
     - pandas
     - scipy
     - shapely
