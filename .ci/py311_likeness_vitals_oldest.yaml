@@ -21,4 +21,3 @@ dependencies:
   - ruff
   - setuptools_scm
   - watermark
-  
