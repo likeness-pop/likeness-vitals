@@ -10,7 +10,7 @@ dependencies:
   - pandas=2.2.1
   - pip
   - scipy=1.12.0
-  - shapely=2.0.1
+  - shapely=2.0
   - tqdm=4.63
   - matplotlib=3.7.1
   # testing, etc.
@@ -21,4 +21,3 @@ dependencies:
   - ruff
   - setuptools_scm
   - watermark
-  
