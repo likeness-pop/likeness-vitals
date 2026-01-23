@@ -28,12 +28,14 @@ jobs:
           py311_likeness_vitals_oldest,
           py311_likeness_vitals_latest,
           py312_likeness_vitals_latest,
-          py312_likeness_vitals_dev,
+          py313_likeness_vitals_latest,
+          py314_likeness_vitals_latest,
+          py314_likeness_vitals_dev,
         ]
         include:
-          - environment-file: py312_likeness_vitals_latest
+          - environment-file: py314_likeness_vitals_latest
             os: macos-latest  # Apple Silicon
-          - environment-file: py312_likeness_vitals_latest
+          - environment-file: py314_likeness_vitals_latest
             os: windows-latest
       fail-fast: false
 
