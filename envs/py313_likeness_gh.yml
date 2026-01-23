@@ -1,9 +1,9 @@
-name: py312_likeness_gh
+name: py313_likeness_gh
 channels:
   - conda-forge
   - r
 dependencies:
-  - python=3.12
+  - python=3.13
   # core dependencies
   - awkward>=2.6
   - ca-certificates>=2025.10.5
