@@ -1,4 +1,4 @@
-# Likeness-Vitals: Shared utility functionality for the Likeness ecosystem
+# Likeness-Vitals: Shared utilities for the Likeness ecosystem
 
 ![tag](https://img.shields.io/github/v/release/likeness-pop/likeness-vitals?include_prereleases&sort=semver)
 [![PyPI version](https://badge.fury.io/py/likeness-vitals.svg)](https://badge.fury.io/py/likeness-vitals)
@@ -64,10 +64,10 @@ $ pip install .
 
 The conda environments provided in `./envs/*` contain all dependencies required to use `livelike`, `pymedm` / `pmedm-legacy`, and `likeness-vitals`.
 
-The install script will create a Python 3.14 environment and automatically choose between the vanilla and CUDA environment based on system type. To run it:
+The install script will create a Python 3.12 environment and automatically choose between the vanilla and CUDA environment based on system type. To run it:
 
 ```
 bash setup.sh
 ```
 
-If an older version of Python is desired, simply update `setup.sh` appropriately.
+If a newer version of Python is desired, simply update `setup.sh` appropriately, though the CUDA version may not be available.
