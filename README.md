@@ -71,3 +71,9 @@ bash setup.sh
 ```
 
 If a newer version of Python is desired, simply update `setup.sh` appropriately, though the CUDA version may not be available.
+
+## Citation
+
+If you find this package useful or use it an academic publication, please cite as:
+
+* **Tuccillo, J.V. and Gaboardi, J.D.** (2025) *likeness-vitals*. Computer Software. URL: https://github.com/likeness-pop/likeness-vitals. DOI: [10.11578/dc.20250320.6](https://doi.org/10.11578/dc.20250320.6)
