@@ -3,6 +3,7 @@ from matplotlib.patches import Patch, Circle
 import numpy as np
 import pandas as pd
 
+
 def hub_and_spoke_glyph_plot(
     gdf,
     value_cols,

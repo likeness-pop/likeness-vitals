@@ -2,6 +2,7 @@ import matplotlib as mpl
 from matplotlib import pyplot as plt
 import numpy as np
 
+
 def profile_annotated_tilemap(
     df,
     cmap_name,
@@ -81,7 +82,7 @@ def profile_annotated_tilemap(
             val = df.iloc[i, j]
             is_max = val == col_max.iloc[j]
 
-            # approximate displayed cell color 
+            # approximate displayed cell color
             # after alpha blending onto white background
             base_rgb = np.array(mpl.colors.to_rgb(pal[i]))
             a = alpha_vals[i, j]
