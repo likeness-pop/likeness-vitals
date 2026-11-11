@@ -288,7 +288,8 @@ def profile_annotated_tilemap(
             val = df.iloc[i, j]
             is_max = val == col_max.iloc[j]
 
-            # approximate displayed cell color after alpha blending onto white background
+            # approximate displayed cell color 
+            # after alpha blending onto white background
             base_rgb = np.array(mpl.colors.to_rgb(pal[i]))
             a = alpha_vals[i, j]
             blended_rgb = a * base_rgb + (1 - a) * np.array([1, 1, 1])
