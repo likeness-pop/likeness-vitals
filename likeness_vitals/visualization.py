@@ -4,6 +4,7 @@ from matplotlib.patches import Patch, Circle
 import numpy as np
 import pandas as pd
 
+
 def hub_and_spoke_glyph_plot(
     gdf,
     value_cols,
@@ -68,15 +69,14 @@ def hub_and_spoke_glyph_plot(
     marker_size : float
         Tip marker size.
     legend_loc : str
-        Location of legend on plot. 
+        Location of legend on plot.
     legend_title : str
-        Legend title. 
+        Legend title.
     choropleth_col : str, None
         Name of column in `gdf` used to (optionally) shade the base map boundaries.
     choropleth_alpha : float
         Opacity level for choropleth shading.
     """
-
 
     gdf = gdf.copy()
 
@@ -85,12 +85,16 @@ def hub_and_spoke_glyph_plot(
     if gdf.crs.is_geographic:
         gdf = gdf.to_crs(gdf.estimate_utm_crs())
 
-    pts = gdf.geometry.representative_point() if use_representative_point else gdf.geometry.centroid
+    pts = (
+        gdf.geometry.representative_point()
+        if use_representative_point
+        else gdf.geometry.centroid
+    )
     gdf["x"] = pts.x
     gdf["y"] = pts.y
 
     if colors is None:
-        colors = plt.cm.tab10.colors[:len(value_cols)]
+        colors = plt.cm.tab10.colors[: len(value_cols)]
     if len(colors) < len(value_cols):
         raise ValueError("Need at least as many colors as value columns.")
 
@@ -106,20 +110,20 @@ def hub_and_spoke_glyph_plot(
         gdf.plot(ax=ax, facecolor="whitesmoke", edgecolor="black", linewidth=0.8)
     else:
         gdf.plot(
-            ax=ax, 
-            column=choropleth_col, 
-            cmap="Grays", 
-            edgecolor="black", 
-            alpha=choropleth_alpha, 
-            linewidth=0.8, 
+            ax=ax,
+            column=choropleth_col,
+            cmap="Grays",
+            edgecolor="black",
+            alpha=choropleth_alpha,
+            linewidth=0.8,
             legend=True,
             legend_kwds={
-                "orientation" : "horizontal",
-                "shrink" : 0.4,
-                "pad" : 0.01,
-                "alpha" : choropleth_alpha,
-                "label" : choropleth_col,
-            }
+                "orientation": "horizontal",
+                "shrink": 0.4,
+                "pad": 0.01,
+                "alpha": choropleth_alpha,
+                "label": choropleth_col,
+            },
         )
 
     n = len(value_cols)
@@ -133,7 +137,11 @@ def hub_and_spoke_glyph_plot(
     h_frac = symbol_size / fig_h
 
     for _, row in gdf.iterrows():
-        values = pd.to_numeric(row[value_cols], errors="coerce").fillna(0).to_numpy(dtype=float)
+        values = (
+            pd.to_numeric(row[value_cols], errors="coerce")
+            .fillna(0)
+            .to_numpy(dtype=float)
+        )
 
         if np.all(values <= 0):
             continue
@@ -168,22 +176,17 @@ def hub_and_spoke_glyph_plot(
             x1, y1 = r1 * np.cos(ang), r1 * np.sin(ang)
 
             iax.plot(
-                [x0, x1], [y0, y1],
+                [x0, x1],
+                [y0, y1],
                 color=col,
                 linewidth=spoke_linewidth,
                 alpha=alpha,
                 solid_capstyle="round",
-                zorder=2
+                zorder=2,
             )
 
             if show_tip_markers:
-                iax.scatter(
-                    [x1], [y1],
-                    s=marker_size,
-                    color=col,
-                    alpha=alpha,
-                    zorder=3
-                )
+                iax.scatter([x1], [y1], s=marker_size, color=col, alpha=alpha, zorder=3)
 
         if draw_hub:
             hub = Circle(
@@ -192,13 +195,13 @@ def hub_and_spoke_glyph_plot(
                 facecolor=hub_facecolor,
                 edgecolor=hub_edgecolor,
                 linewidth=hub_linewidth,
-                zorder=4
+                zorder=4,
             )
             iax.add_patch(hub)
 
     handles = [
         Patch(facecolor=c, edgecolor="none", alpha=alpha, label=col)
-        for c, col in zip(colors[:len(value_cols)], value_cols)
+        for c, col in zip(colors[: len(value_cols)], value_cols)
     ]
     ax.legend(handles=handles, title=legend_title, loc=legend_loc)
     ax.set_axis_off()
