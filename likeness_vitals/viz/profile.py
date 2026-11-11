@@ -1,6 +1,6 @@
 import matplotlib as mpl
-from matplotlib import pyplot as plt
 import numpy as np
+from matplotlib import pyplot as plt
 
 
 def profile_annotated_tilemap(

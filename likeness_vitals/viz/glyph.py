@@ -1,7 +1,7 @@
-from matplotlib import pyplot as plt
-from matplotlib.patches import Patch, Circle
 import numpy as np
 import pandas as pd
+from matplotlib import pyplot as plt
+from matplotlib.patches import Circle, Patch
 
 
 def hub_and_spoke_glyph_plot(
@@ -167,7 +167,7 @@ def hub_and_spoke_glyph_plot(
         iax.set_facecolor("none")
 
         # Draw spokes
-        for ang, val, col in zip(base_angles, scaled, colors[:n]):
+        for ang, val, col in zip(base_angles, scaled, colors[:n], strict=True):
             r0 = max(spoke_min, hub_radius if draw_hub else 0.0)
             r1 = r0 + spoke_scale * val
 
@@ -200,7 +200,7 @@ def hub_and_spoke_glyph_plot(
 
     handles = [
         Patch(facecolor=c, edgecolor="none", alpha=alpha, label=col)
-        for c, col in zip(colors[: len(value_cols)], value_cols)
+        for c, col in zip(colors[: len(value_cols)], value_cols, strict=True)
     ]
     ax.legend(handles=handles, title=legend_title, loc=legend_loc)
     ax.set_axis_off()
