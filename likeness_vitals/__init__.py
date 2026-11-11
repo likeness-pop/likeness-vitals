@@ -43,10 +43,6 @@ from .vitals import (
     match,
     progress,
 )
-# from .visualization import (
-#     hub_and_spoke_glyph_plot,
-#     profile_annotated_tilemap,
-# )
 
 with contextlib.suppress(PackageNotFoundError):
     __version__ = version("likeness_vitals")
