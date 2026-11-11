@@ -21,7 +21,7 @@ from importlib.metadata import PackageNotFoundError, version
 #     stacklevel=1,
 # )
 #
-from . import constants, sg_ops, vitals
+from . import constants, sg_ops, vitals, viz
 from .constants import (
     BGID,
     BKID,
@@ -43,10 +43,10 @@ from .vitals import (
     match,
     progress,
 )
-from .visualization import (
-    hub_and_spoke_glyph_plot,
-    profile_annotated_tilemap,
-)
+# from .visualization import (
+#     hub_and_spoke_glyph_plot,
+#     profile_annotated_tilemap,
+# )
 
 with contextlib.suppress(PackageNotFoundError):
     __version__ = version("likeness_vitals")
